@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission.
+    </div>
+    <div class="answer">
+        <p>
+            Catch an idea 💡! Use recursive approach: when <b class="code">n</b> is less then 2 your function must return 1, otherwise return a product of <b class="code">n</b> and factorial of the next smaller integer.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok, what should I start from?
+    </div>
+    <div class="answer">
+        <p>
+            Write a <a target="_blank" href="https://www.w3schools.com/react/react_es6_ternary.asp">ternary operator</a> with this two cases.
+        </p>
+        <pre class="brush: javascript">
+return n > 1 ? ... : ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        What to do next?
+    </div>
+    <div class="answer">
+        <p>
+            For <b class="code">n</b> 0 or 1 your function must return 1.
+        </p>
+        <pre class="brush: javascript">
+return n > 1 ? ... : 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I still need a hint.
+    </div>
+    <div class="answer">
+        <p>
+            That is almost all. If current <b class="code">n</b> is still bigger than 1, return a product of <b class="code">n</b> and call the same function with <b class="code">n-1</b> argument (recursive approachL multiple nested calling of the same function). 
+        </p>
+        <pre class="brush: javascript">
+return n > 1 ? n * factorial(n - 1) : 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        So, how my final solution should look like?
+    </div>
+    <div class="answer">
+        <p>
+            You just need to wrap your code into function expression. Using type hints for input and output data are highly recommended.
+        </p>
+        <p>Here is the whole solution:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    return n > 1 ? n * factorial(n - 1) : 1;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Show me more solutions!<br />
+        'Cause I wanna be a real 🥇 Javascript Hero!
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            Start from 1 and multiply bu all integers from 2 to the given <b class="code">n</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    let res = 1;
+    for (let i = 2; i <= n; i++) 
+        res*= i;
+    
+    return res;
+}
+        </pre>
+        </div>
+        <p>Click <b>Best Solutions</b> at mission menu and see a lot of other interesting solutions!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Thanks! I know and understand more now! Everything works fine!
+    </div>
+    <div class="answer">
+        Glad to hear it 👍!
+    </div>
+</div>
+</body>
