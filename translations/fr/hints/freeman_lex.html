@@ -1,0 +1,101 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Je n'ai aucune idée de la manière de commencer à résoudre cette mission.
+    </div>
+    <div class="answer">
+        <p>
+            Trouvez une idée 💡! Utilisez une approche récursive: lorsque <b class="code">n</b> est inférieur à 2, votre fonction doit renvoyer 1, sinon renvoyer un produit de <b class="code">n</b> et la factorielle du prochain entier plus petit.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok, par quoi dois-je commencer?
+    </div>
+    <div class="answer">
+        <p>
+            Ecrivez une instruction conditionnelle <a target="_blank" href="https://learnpython.com/blog/python-if-in-one-line/">single line</a> <b class="code">if</b> avec ces deux cas.
+        </p>
+        <pre class="brush: python">
+return ... if n> 1 else ...
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Que faire ensuite?
+    </div>
+    <div class="answer">
+        <p>
+            Pour <b class="code">n</b> 0 ou 1, votre fonction doit renvoyer 1.
+        </p>
+        <pre class="brush: python">
+return ... if n> 1 else 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        J'ai encore besoin d'un indice.
+    </div>
+    <div class="answer">
+        <p>
+            C'est presque tout. Si la valeur actuelle de <b class="code">n</b> est toujours supérieure à 1, renvoyez un produit de <b class="code">n</b> et appelez la même fonction avec l'argument <b class="code">n-1</b> (approche récursive - plusieurs appels imbriqués de la même fonction). 
+        </p>
+        <pre class="brush: python">
+return n*factorial(n-1) if n> 1 else 1
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Alors, à quoi devrait ressembler ma solution finale?
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit d'envelopper votre code dans une expression de fonction. Il est fortement recommandé d'utiliser des indications de type pour les données d'entrée et de sortie.
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def factorial(n: int) -> int:
+
+    return n*factorial(n-1) if n> 1 else 1
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Montrez-moi d'autres solutions!<br />
+        parce que je veux être une vraie 🥇 Python Ninnjaa!
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+            Commencez par 1 et multipliez par tous les entiers de 2 à <b class="code">n</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def factorial(n: int) -> int:
+
+    res = 1
+    for i in range(2, n + 1):
+        res *= i
+        
+    return res
+        </pre>
+        </div>
+        <p>Cliquez sur <b>Best Solutions</b> dans le menu mission et découvrez de nombreuses autres solutions intéressantes!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Merci beaucoup! Je sais et je comprends mieux maintenant! Tout fonctionne bien!
+    </div>
+    <div class="answer">
+        Heureux de l'apprendre 👍!
+    </div>
+</div>
+</body>
