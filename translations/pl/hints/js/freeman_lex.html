@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+    </div>
+    <div class="answer">
+        <p>
+            Proszę złapać pomysł 💡! Proszę użyć podejścia rekurencyjnego: gdy <b class="code">n</b> jest mniejsze niż 2, funkcja musi zwrócić 1, w przeciwnym razie zwraca iloczyn <b class="code">n</b> i czynnika kolejnej mniejszej liczby całkowitej.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok, od czego powinienem zacząć?
+    </div>
+    <div class="answer">
+        <p>
+            Proszę napisać <a target="_blank" href="https://www.w3schools.com/react/react_es6_ternary.asp">ternary operator</a> z tymi dwoma przypadkami.
+        </p>
+        <pre class="brush: javascript">
+return n> 1? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Co robić dalej?
+    </div>
+    <div class="answer">
+        <p>
+            W przypadku <b class="code">n</b> 0 lub 1 funkcja musi zwrócić 1.
+        </p>
+        <pre class="brush: javascript">
+return n> 1? ...: 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Nadal potrzebuję podpowiedzi.
+    </div>
+    <div class="answer">
+        <p>
+            To prawie wszystko. Jeśli bieżący <b class="code">n</b> jest nadal większy niż 1, proszę zwrócić iloczyn <b class="code">n</b> i wywołać tę samą funkcję z argumentem <b class="code">n-1</b> (podejście rekurencyjneL wielokrotne zagnieżdżone wywołanie tej samej funkcji). 
+        </p>
+        <pre class="brush: javascript">
+return n> 1? n * factorial(n - 1): 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Jak więc powinno wyglądać moje ostateczne rozwiązanie?
+    </div>
+    <div class="answer">
+        <p>
+            Proszę tylko opakować swój kod w wyrażenie funkcyjne. Zaleca się używanie podpowiedzi typu dla danych wejściowych i wyjściowych.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    return n> 1? n * factorial(n - 1): 1;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 bohaterem Javascript!
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę pobrać!</p>
+        <p>
+            Proszę zacząć od 1 i pomnożyć przez wszystkie liczby całkowite od 2 do podanej <b class="code">n</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    let res = 1;
+    for (let i = 2; i <= n; i++) 
+        res*= i;
+    
+    return res;
+}
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!
+    </div>
+    <div class="answer">
+        Miło mi to słyszeć 👍!
+    </div>
+</div>
+</body>
