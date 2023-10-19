@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何开始解决这个任务。
+    </div>
+    <div class="answer">
+        <p>
+            给你个建议💡！使用递归方法：当<b class="code">n</b> 小于 2 时，你的函数必须返回 1，否则返回<b class="code">n</b> 与下一个更小整数的阶乘的乘积。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        好吧，我应该从哪里开始呢？
+    </div>
+    <div class="answer">
+        <p>
+            用这两个案例写一个<a target="_blank" href="https://www.w3schools.com/react/react_es6_ternary.asp">ternary operator</a> 。
+        </p>
+        <pre class="brush: javascript">
+return n> 1? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        下一步该怎么做？
+    </div>
+    <div class="answer">
+        <p>
+            对于<b class="code">n</b> 0 或 1，您的函数必须返回 1。
+        </p>
+        <pre class="brush: javascript">
+return n> 1? ...: 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我还需要提示。
+    </div>
+    <div class="answer">
+        <p>
+            差不多就是这样。如果当前<b class="code">n</b> 仍大于 1，则返回<b class="code">n</b> 的乘积，并调用带有<b class="code">n-1</b> 参数的同一函数（递归方法L 多次嵌套调用同一函数）。 
+        </p>
+        <pre class="brush: javascript">
+return n> 1? n * factorial(n - 1): 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        那么，我的最终解决方案应该是怎样的呢？
+    </div>
+    <div class="answer">
+        <p>
+            你只需将代码封装成函数表达式。强烈建议对输入和输出数据使用类型提示。
+        </p>
+        <p>以下是整个解决方案：</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    return n> 1? n * factorial(n - 1): 1;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        向我展示更多解决方案！<br />
+        因为我想成为真正的 🥇 Javascript 英雄！
+    </div>
+    <div class="answer">
+        <p>当然，抓紧时间！</p>
+        <p>
+            从 1 开始，乘以从 2 到给定<b class="code">n</b> 的所有整数。 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    let res = 1;
+    for (let i = 2; i <= n; i++) 
+        res*= i;
+    
+    return res;
+}
+        </pre>
+        </div>
+        <p>点击任务菜单中的<b>Best Solutions</b> ，查看更多其他有趣的解决方案！</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        谢谢！我现在知道并理解得更多了！一切正常！
+    </div>
+    <div class="answer">
+        很高兴听到这个消息 👍！
+    </div>
+</div>
+</body>
