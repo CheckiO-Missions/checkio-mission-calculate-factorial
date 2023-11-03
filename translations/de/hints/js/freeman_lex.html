@@ -1,0 +1,103 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.
+    </div>
+    <div class="answer">
+        <p>
+            Haben Sie eine Idee 💡! Verwenden Sie einen rekursiven Ansatz: Wenn <b class="code">n</b> kleiner als 2 ist, muss Ihre Funktion 1 zurückgeben, andernfalls ein Produkt aus <b class="code">n</b> und der Fakultät der nächstkleineren ganzen Zahl.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok, womit soll ich anfangen?
+    </div>
+    <div class="answer">
+        <p>
+            Schreiben Sie eine <a target="_blank" href="https://www.w3schools.com/react/react_es6_ternary.asp">ternary operator</a> mit diesen beiden Fällen.
+        </p>
+        <pre class="brush: javascript">
+return n> 1? ...: ...;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Was ist als nächstes zu tun?
+    </div>
+    <div class="answer">
+        <p>
+            Für <b class="code">n</b> 0 oder 1 muss Ihre Funktion 1 zurückgeben.
+        </p>
+        <pre class="brush: javascript">
+return n> 1? ...: 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich brauche noch einen Hinweis.
+    </div>
+    <div class="answer">
+        <p>
+            Das ist fast alles. Wenn die aktuelle <b class="code">n</b> immer noch größer als 1 ist, geben Sie ein Produkt von <b class="code">n</b> zurück und rufen dieselbe Funktion mit dem Argument <b class="code">n-1</b> auf (rekursiver AnsatzL mehrere verschachtelte Aufrufe derselben Funktion). 
+        </p>
+        <pre class="brush: javascript">
+return n> 1? n * factorial(n - 1): 1;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Wie sollte also meine endgültige Lösung aussehen?
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen Ihren Code nur in einen Funktionsausdruck verpacken. Die Verwendung von Typ-Hinweisen für Eingabe- und Ausgabedaten wird dringend empfohlen.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    return n> 1? n * factorial(n - 1): 1;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Zeigen Sie mir mehr Lösungen!<br />
+        denn ich möchte ein echter 🥇 Javascript-Held sein!
+    </div>
+    <div class="answer">
+        <p>Klar, schnappen Sie es sich!</p>
+        <p>
+            Beginnen Sie bei 1 und multiplizieren Sie mit allen ganzen Zahlen von 2 bis zu der angegebenen <b class="code">n</b>. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function factorial(n: number): number {
+
+    let res = 1;
+    for (let i = 2; i <= n; i++) 
+        res*= i;
+    
+    return res;
+}
+        </pre>
+        </div>
+        <p>Klicken Sie auf <b>Best Solutions</b> im Missionsmenü und sehen Sie sich viele andere interessante Lösungen an!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert bestens!
+    </div>
+    <div class="answer">
+        Freut mich zu hören 👍!
+    </div>
+</div>
+</body>
